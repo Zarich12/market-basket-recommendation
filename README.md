@@ -1,4 +1,4 @@
-# Market Basket Analysis
+# Market Basket Recomendation
 
 A machine learning webapp that recommends other products to you after purchasing an item
 
@@ -8,7 +8,7 @@ A machine learning webapp that recommends other products to you after purchasing
 Clone the project
 
 ```bash
-  git clone https://github.com/Zarich12/richie-s-market-basket.git
+  git clone https://github.com/Zarich12/market-basket-recommendation.git
 ```
 
 Go to the project directory
