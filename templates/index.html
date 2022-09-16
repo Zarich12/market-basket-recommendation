@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Richie's Market</title>
+
+
+<script>
+
+function printAll() {
+
+var str="",i;
+
+for (i=0;i<myForm.myOption.options.length;i++) {
+    if (myForm.myOption.options[i].selected) {
+        str = str + i + " ";
+    }
+}
+
+document.getElementById("myText").value = str;
+
+}
+</script>
+</head>
+<body>
+<div
+    class="flex items-center justify-center mx-auto absolute top-5 right-0 left-1/3"
+  ></div>
+      </svg>
+      <span class="ml-3 text-xl">Richie's Market</span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+  
+    </nav>
+    <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">BUY
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<section class="text-gray-600 body-font bg-red-200">
+  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+      <img class="object-cover object-center rounded" alt="hero" src="https://source.unsplash.com/720x600/?groceries">
+    </div>
+    <div class="lg:w-2/6 md:w-1/2 bg-gray-200 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+      <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Richie's Market</h2>
+
+	  <div class="relative mb-4">
+
+<form action="{{ url_for('pred')}}" method="post" name="myForm">
+<input type="text" id="myText" name="final" hidden="hidden" value="">
+              <label for="full-name" class="leading-7 text-sm text-gray-600">Choose products:</label>
+
+  <select data-placeholder="Choose tags ..." name="myOption" multiple class="chosen-select w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+    <option value="0">Butter milk</option>
+    <option value="1">Yogurt</option>
+    <option value="2">Whole milk</option>
+    <option value="3">Hygiene articles</option>
+    <option value="4">Curd</option>
+    <option value="5">Margarine</option>
+	<option value="6">Liver loaf</option>
+
+    <option value="7">Soda</option>
+    <option value="8">Frankfurter</option>
+    <option value="9">Soups</option>
+    <option value="10">Pastry</option>
+    <option value="11">Other vegetables</option>
+    <option value="12">Sausage</option>
+    <option value="13">Rolls/buns</option>
+    <option value="14">Spread cheese</option>
+    <option value="15">Frozen fish</option>
+	<option value="16">Soft cheese</option>
+    <option value="17">Ham</option>
+    <option value="18">Miscellaneous Beverages</option>
+    <option value="19">Meat</option>
+    <option value="20">Frozen vegetables</option>
+    <option value="21">Canned beer</option>
+    <option value="22">Bottled beer</option>
+
+    <option value="23">Tropical fruit</option>
+    <option value="24">Root vegetables</option>
+  </select>
+  
+  </div>
+      <button class="text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg" onClick="printAll()">BUY</button>
+	  <p class="text-xs text-gray-500 mt-3">Committed for best quality products.</p>
+
+<br>
+  <h2 class="text-gray-900 text-lg font-medium title-font mb-5">{{data}}</h2>
+
+</form>
+</div>
+
+    
+  </div>
+</section>
+
+
+
+</body>
+</html>
